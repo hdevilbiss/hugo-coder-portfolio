@@ -319,17 +319,9 @@ img {
     }
     p {
       img {
-        border: 2px solid @dark-accent-color;
+        border: @border-height solid @dark-accent-color;
       }
     }
-  }
-}
-
-.highlight {
-  p {
-    background-color: @border-color;
-    padding-bottom: 5px;
-    padding-top: 5px;
   }
 }
 
@@ -482,13 +474,13 @@ img {
 * Options are: @underline-from-left, @underline-from-middle, or @underline-from-right
 */
 a {
-  background-image: linear-gradient(@border-color,@border-color);
-  background-position: @underline-from-middle 100%;
+  background-image: linear-gradient(@highlighter,@highlighter);
+  background-position: @underline-from-left 100%;
   background-repeat: no-repeat;
   background-size: 0 @border-height;
   display: inline;
   padding-bottom: @border-height;
-  transition: background-size 0.5s;
+  transition: background-size 0.25s;
 }
 a:hover {
   background-size: 100% @border-height;
