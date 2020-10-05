@@ -357,6 +357,13 @@ img {
   }
 }
 
+@media only screen and (max-device-width: 768px) {
+  .list {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
 .list {
   ul {
     margin: 3.2rem 0 3.2rem 0;
@@ -449,6 +456,15 @@ img {
         font-size: 1.6rem;
       }
     }
+    p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media only screen and (max-width: 576px) {
+      p {
+        text-align: justify;
+      }
+    }
   }
 
   .error {
@@ -497,11 +513,11 @@ img {
 * Options are: @underline-from-left, @underline-from-middle, or @underline-from-right
 */
 a {
-  background-image: linear-gradient(@highlighter,@highlighter);
+  background-image: linear-gradient(@dark-accent-color,@light-accent-color);
   background-position: @underline-from-left 100%;
   background-repeat: no-repeat;
   background-size: 0 @border-height;
-  display: inline;
+  //display: inline;
   padding-bottom: @border-height;
   transition: background-size 0.60s;
   @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
