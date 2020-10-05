@@ -33,7 +33,6 @@ body {
 
 a {
   color: @darker-fg-color;
-  font-weight: 700;
   text-decoration: none;
 }
 
@@ -138,7 +137,6 @@ img {
 p {
   margin: 1.6rem 0 1.6rem 0;
   a {
-    font-weight: 400;
     color: @darker-fg-color;
     text-decoration: none;
     text-underline-position: under;
@@ -290,6 +288,17 @@ th, td {
   }
 }
 
+.col-33 {
+  flex: 33%;
+}
+.col-50 {
+  flex: 50%;
+}
+.col-67 {
+  flex: 67%;
+  padding-left: 10px;
+}
+
 .container {
   @media (min-width: 920px) {
     margin-left: auto;
@@ -368,31 +377,26 @@ th, td {
 }
 
 .list {
-  ul {
-    margin: 3.2rem 0 3.2rem 0;
-    list-style: none;
-    padding: 0;
-    li {
-      font-size: 1.6rem;
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        font-size: 1.4rem;
-        margin: 1.6rem 0 1.6rem 0;
-      }
-      span {
-        display: inline-block;
-        text-align: right;
-        width: 20.0rem;
-        margin-right: 3.0rem;
-        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-          display: block;
-          text-align: left;
-        }
-      }
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
-      }
+  p {
+    font-weight: 700;
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    font-size: 1.4rem;
+    margin: 1.6rem 0 1.6rem 0;
+  }
+  span {
+    display: inline-block;
+    text-align: right;
+    width: 20.0rem;
+    margin-right: 3.0rem;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      display: block;
+      text-align: left;
     }
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
 
@@ -407,6 +411,7 @@ th, td {
     background-image: linear-gradient(@nav-border-color,@nav-border-color);
     display: inline;
     font-size: 1.6rem;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 6.0rem;
     letter-spacing: 0.1rem;
@@ -510,6 +515,14 @@ th, td {
   display: table-cell;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  p {
+    margin: 1.6rem 0 0 0;
+  }
+}
+
 .sns-shares {
   display: flex;
   align-items: center;
@@ -577,7 +590,7 @@ th, td {
 
 /* Media-breakpoint Rules */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   .btn-mobile {
     display: block;
     font-size: 2.0rem;
