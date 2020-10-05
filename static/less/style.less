@@ -230,6 +230,25 @@ img {
   display: none;
 }
 
+.back-to-top {
+  p {
+    text-align: center;
+  }
+  a {
+    position: relative;
+    &:before, &:after {
+      content: "\023EB";
+      position: absolute;
+    }
+    &:before {
+      left: -25px;
+    }
+    &:after {
+      right: -25px;
+    }
+  }
+}
+
 .btn-mobile {
   display: none;
   padding: .5rem;
