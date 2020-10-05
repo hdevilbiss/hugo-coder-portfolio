@@ -31,9 +31,11 @@
       {{ end }}
     </header>
     {{ .Content }}
-    <p>
-      <a href="#top-anchor" class="back-to-top">{{ .Site.Params.backToTopText }}</a>
-    </p>
+    <div class="back-to-top">
+      <p>
+        <a href="#top-anchor" class="back-to-top">{{ .Site.Params.backToTopText }}</a>
+      </p>
+    </div>
   </article>
 
   <br/>
