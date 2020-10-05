@@ -1,16 +1,30 @@
 <section class="container list">
   <h1 class="title">{{ .Title }}</h1>
-  <ul>
+  <!--<ul>-->
     {{ range .Paginator.Pages }}
-    <li>
+    <!--<li>
       <span>
         {{ .Date.Format "January 2, 2006" }}
       </span>
       <a href="{{ .Permalink }}">
         {{ .Title }}
       </a>
-    </li>
+    </li>-->
+    <div class="row">
+      <div class="col-33 align-right">
+        <p>
+          <u>{{ .Date.Format "2006-01-02" }}</u>
+        </p>
+      </div>
+      <div class="col-67">
+        <p>
+          <a href="{{ .Permalink }}">
+            {{ .Title }}
+          </a>
+        </p>
+      </div>
+    </div>
     {{ end }}
-  </ul>
+  <!--</ul>-->
   {{ partial "pagination.html" . }}
 </section>
