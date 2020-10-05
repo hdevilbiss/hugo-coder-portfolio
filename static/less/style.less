@@ -237,7 +237,7 @@ img {
   a {
     position: relative;
     &:before, &:after {
-      content: "\023EB";
+      content: "\023EB";//upward arrow
       position: absolute;
     }
     &:before {
@@ -335,6 +335,9 @@ img {
     a {
       background-image: linear-gradient(@light-accent-color,@light-accent-color);
       text-decoration: underline;
+      &.anchorjs-link {
+        background-image: none;
+    }
     }
     p {
       img {
