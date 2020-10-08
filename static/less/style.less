@@ -405,8 +405,10 @@ th, td {
 }
 
 .navigation {
-  height: 6.0rem;
-  width: 100%;
+  background-color: @bg-color;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  height: auto;
   a {
     background-image: linear-gradient(@nav-border-color,@nav-border-color);
     display: inline;
@@ -436,7 +438,7 @@ th, td {
         float: none !important;
       }
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    @media only screen and (max-device-width: 768px) {
       visibility: hidden;
       opacity: 0;
       max-height: 0;
@@ -451,13 +453,6 @@ th, td {
       transition: opacity 0.25s, max-height 0.15s linear;
     }
   }
-}
-
-.navigation {
-  height: auto;
-  background-color: @bg-color;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .page {
@@ -648,6 +643,20 @@ th, td {
   .list {
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .navigation {
+    ul {
+      background-color: rgba(255,255,255,0.9);
+      li:first-child {
+        margin-top: 0.5rem;
+      }
+      li {
+        display: block;
+        a {
+          line-height: 1.6rem;
+        }
+      }
+    }
   }
 }
 
