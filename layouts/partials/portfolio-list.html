@@ -1,0 +1,31 @@
+<section class="container list">
+  <h1 class="title">{{ .Title }}</h1>
+    <!-- For each page that uses this list template ... -->
+    {{ range .Paginator.Pages }}
+      <div class="row portfolio-card">
+        <!-- ... list the date from front matter ... -->
+        <div class="col-33">
+          <p>
+            <u>{{ .Date.Format "2006-01-02" }}</u>
+          </p>
+        </div>
+        <!-- ... list title with link from front matter... -->
+        <div class="col-33">
+          <p>
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </p>
+        </div>
+        <!-- and list the categories from front matter ... -->
+            <div class="row">
+              {{ range $category := .Params.Categories }}
+              <p class="category-bubble">
+                {{ $category }}
+              </p>
+            {{ end }}
+            </div>
+      </div>
+    {{ end }}
+  {{ partial "pagination.html" . }}
+</section>
