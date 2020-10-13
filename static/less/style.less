@@ -18,8 +18,8 @@ html {
 
 body {
   display: flex;
-  color: @fg-color;
-  background-color: @bg-color;
+  color: @dark;
+  background-color: @light;
   font-family: 'Rubik', sans-serif;
   font-size: 1.4em;
   font-weight: 400;
@@ -64,7 +64,7 @@ blockquote {
 code {
   display: inline-block;
   background-color: @code-color !important;
-  color: @bg-color;
+  color: @light;
   padding: 0.4rem 0.5rem 0.4rem 0.5rem;
 }
 
@@ -209,9 +209,23 @@ th, td {
   }
 }
 
+
+
 .btn-mobile {
   display: none;
   padding: .5rem;
+}
+
+.category-bubble {
+  background-color: @dark-accent-color;
+  border: 1px solid @dark-accent-color;
+  border-radius: 5px;
+  color: #FFF;
+  flex-shrink: 1;
+  p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
 }
 
 .centered {
@@ -321,7 +335,7 @@ th, td {
       h2 {
         margin-top: 1.0rem;
         font-size: 1.8rem;
-        color: @fg-color;
+        color: @dark;
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
           font-size: 1.6rem;
         }
@@ -330,6 +344,7 @@ th, td {
     a {
       background-image: linear-gradient(@light-accent-color,@light-accent-color);
       text-decoration: underline;
+      text-underline-position: under;
       &.anchorjs-link {
         background-image: none;
         transition: all 1s;
@@ -405,7 +420,7 @@ th, td {
 }
 
 .navigation {
-  background-color: @bg-color;
+  background-color: @light;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   height: auto;
@@ -456,7 +471,7 @@ th, td {
 }
 
 .page {
-  background-color: @bg-color;
+  background-color: @dark;
   padding: 1rem;
 }
 
@@ -481,6 +496,14 @@ th, td {
   }
 }
 
+.portfolio-card {
+  align-items: center;
+  background-color: @light;
+  border: 1px solid @dark;
+  color: @dark;
+  justify-content: center;
+}
+
 .portfolio .portfolio-inner {
   display: flex;
   align-items: stretch;
@@ -498,7 +521,7 @@ th, td {
 }
 
 .post {
-  background-color: @bg-color;
+  background-color: @light;
   padding: 1rem;
 }
 
