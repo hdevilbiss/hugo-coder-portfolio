@@ -1,15 +1,6 @@
 <section class="container list">
   <h1 class="title">{{ .Title }}</h1>
-  <!--<ul>-->
     {{ range .Paginator.Pages }}
-    <!--<li>
-      <span>
-        {{ .Date.Format "January 2, 2006" }}
-      </span>
-      <a href="{{ .Permalink }}">
-        {{ .Title }}
-      </a>
-    </li>-->
     <div class="row">
       <div class="col-33">
         <p>
@@ -25,6 +16,5 @@
       </div>
     </div>
     {{ end }}
-  <!--</ul>-->
   {{ partial "pagination.html" . }}
 </section>
