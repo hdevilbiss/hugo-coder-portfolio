@@ -1,31 +1,28 @@
-<section class="container list">
+<section class="container">
   <h1 class="title">Portfolio</h1>
-    <!-- For each page that uses this list template ... -->
+  <div class="flex-container">
     {{ range .Paginator.Pages }}
-      <div class="row portfolio-card">
-        <!-- ... list the date from front matter ... -->
-        <div class="col-33">
-          <p>
-            <u>{{ .Date.Format "2006-01-02" }}</u>
-          </p>
-        </div>
-        <!-- ... list title with link from front matter... -->
-        <div class="col-33">
-          <p>
+      <div class="portfolio-card flex-col">
+          <h2>
             <a href="{{ .Permalink }}">
               {{ .Title }}
             </a>
+          </h2>
+          <p>
+            {{ .Params.Summary }}
           </p>
+          <p>
+            <a href="{{ .Params.project_url }}">
+              Visit the site
+            </a>
+          </p>
+          {{ range $category := .Params.Categories }}
+            <span class="category-bubble">
+              <a href="/categories/{{ $category | urlize | lower }}">{{ $category }}</a>
+            </span>
+          {{ end }}
         </div>
-        <!-- and list the categories from front matter ... -->
-            <div class="row">
-              {{ range $category := .Params.Categories }}
-              <p class="category-bubble">
-                {{ $category }}
-              </p>
-            {{ end }}
-            </div>
-      </div>
     {{ end }}
+  </div>
   {{ partial "pagination.html" . }}
 </section>
