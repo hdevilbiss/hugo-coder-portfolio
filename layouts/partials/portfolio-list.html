@@ -11,11 +11,15 @@
           <p>
             {{ .Params.Summary }}
           </p>
+          {{ if eq (.Params.project_url) ("https://webdevil.biz")}}
+            <p><em>You're on this website already!</em></p>
+          {{ else }}
           <p>
             <a href="{{ .Params.project_url }}">
               Visit the site
             </a>
           </p>
+          {{ end }}
           {{ range $category := .Params.Categories }}
             <span class="category-bubble">
               <a href="/categories/{{ $category | urlize | lower }}">{{ $category }}</a>
