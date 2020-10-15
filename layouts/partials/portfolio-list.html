@@ -25,12 +25,14 @@
               Read More
             </a>
           </p>
-          {{ range $category := .Params.Categories }}
-            <span class="category-bubble">
-              <a href="/categories/{{ $category | urlize | lower }}">{{ $category }}</a>
-            </span>
-          {{ end }}
-        </div>
+          <div class="inner-flex-grid">
+            {{ range $category := .Params.Categories }}
+                <span class="category-bubble">
+                  <a href="/categories/{{ $category | urlize | lower }}">{{ $category }}</a>
+                </span>
+            {{ end }}
+          </div>
+      </div>
     {{ end }}
   </div>
   {{ partial "pagination.html" . }}
