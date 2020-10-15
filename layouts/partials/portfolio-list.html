@@ -19,6 +19,11 @@
               Visit the site
             </a>
           </p>
+          <p>
+            <a href="{{ .Permalink }}">
+              Read More
+            </a>
+          </p>
           {{ end }}
           {{ range $category := .Params.Categories }}
             <span class="category-bubble">
