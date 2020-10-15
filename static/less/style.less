@@ -167,8 +167,6 @@ th, td {
   padding: .5rem;
 }
 
-
-
 .centered {
   display: flex;
   height: 100%;
@@ -314,16 +312,17 @@ th, td {
 }
 
 .flex-container {
-  border: 1px solid black;
   display: flex;
+  justify-content: center;
   @media (max-width: 400px) {
     display: block;
   }
 }
 
 .flex-col {
-  border: 1px solid black;
+  border: 1px solid @dark;
   flex: 1;
+  margin: 0 5px 0 5px;
   padding: 0 5px 0 5px;
 }
 
@@ -344,6 +343,11 @@ th, td {
 
 .hpot {
   display: none;
+}
+
+.inner-flex-grid {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .list {
@@ -461,6 +465,7 @@ th, td {
     padding: 2px;
     margin: 1px;
     a {
+      background-image: none;
       color: #FFF;
       text-decoration: none;
     }
