@@ -34,7 +34,7 @@ a {
 * Options are: @underline-from-left, @underline-from-middle, or @underline-from-right
 */
 a {
-  background-image: linear-gradient(@dark-accent-color,@light-accent-color);
+  background-image: linear-gradient(@light-accent-color,@light-accent-color);
   background-position: @underline-from-left 100%;
   background-repeat: no-repeat;
   background-size: 0 @border-height;
@@ -91,6 +91,7 @@ img {
 
 p {
   margin: 1.1rem 0 1.1rem 0;
+  font-size: 1.2rem;
   a {
     color: @darker-fg-color;
     text-decoration: none;
@@ -137,7 +138,7 @@ th, td {
 /* Class Rules */
 
 .avatar img {
-  width: 20rem;
+  width: 15rem;
   height: auto;
   border-radius: 50%;
   @media only screen and (max-device-width: 768px) {
