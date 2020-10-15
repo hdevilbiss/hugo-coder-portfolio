@@ -27,7 +27,8 @@ body {
 
 a {
   color: @darker-fg-color;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 /*Variables @from-middle and @border-height described at the top of the document
@@ -44,9 +45,9 @@ a {
   @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
     transition: background-size 0.25s;
   }
-}
-a:hover {
-  background-size: 100% @border-height;
+  &:hover {
+    background-size: 100% @border-height;
+  }
 }
 
 blockquote {
@@ -93,11 +94,6 @@ img {
 p {
   margin: 1.1rem 0 1.1rem 0;
   font-size: 1.2rem;
-  a {
-    color: @darker-fg-color;
-    text-decoration: none;
-    text-underline-position: under;
-  }
 }
 
 pre {
@@ -171,16 +167,7 @@ th, td {
   padding: .5rem;
 }
 
-.category-bubble {
-  background-color: @dark-accent-color;
-  border: 1px solid @dark-accent-color;
-  border-radius: 5px;
-  a {
-    background-image: none;
-    color: #FFF;
-    text-decoration: none;
-  }
-}
+
 
 .centered {
   display: flex;
@@ -404,11 +391,12 @@ th, td {
   a {
     background-image: linear-gradient(@nav-border-color,@nav-border-color);
     display: inline;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 6.0rem;
     letter-spacing: 0.1rem;
+    text-decoration: none;
   }
   ul {
     list-style: none;
@@ -473,11 +461,19 @@ th, td {
 .portfolio-card {
   background-color: @light;
   border: 1px solid @dark;
-  color: @dark;
-  a, a:hover {
-    background-image: (linear-gradient(@light-accent-color,@light-accent-color));
-    text-decoration: underline;
-    text-underline-position: under;
+  a {
+
+  }
+  .category-bubble {
+    background-color: @dark-accent-color;
+    border: 1px solid @dark-accent-color;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 1px;
+    a {
+      color: #FFF;
+      text-decoration: none;
+    }
   }
 }
 
