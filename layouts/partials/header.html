@@ -11,7 +11,7 @@
           {{ range sort . }}
             <li class="navigation-item {{ if $.Site.Params.itemscentered }} align-center {{ else }} {{ if $.Site.Params.rtl }} align-right {{ else }} align-left {{ end }} {{ end }}">
               <a class="navigation-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-            </li>&nbsp;
+            </li> &nbsp;
           {{ end }}
         {{ end }}
         {{ if .Site.IsMultiLingual }}
