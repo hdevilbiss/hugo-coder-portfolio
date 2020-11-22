@@ -91,6 +91,35 @@ img {
   max-width: 100%;
 }
 
+input {
+  border: 0.5px solid @code-color;
+  border-radius: 5px;
+  box-shadow: 5px 7.5px 5px @shadow;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 125%;
+  margin: 8px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+#my-form-button {
+  background-color: @light;
+  border: 0.5px solid @code-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 125%;
+  font-weight: bolder;
+  margin: 8px 0;
+  padding: 10px;
+  transition: background 1s;
+  width: 100%;
+  &:hover{
+    background-color: @light-accent-color;
+  }
+}
+
 p {
   margin: 1.1rem 0 1.1rem 0;
   font-size: 1.2rem;
