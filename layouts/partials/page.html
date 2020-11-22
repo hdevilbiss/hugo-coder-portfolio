@@ -11,4 +11,7 @@
   {{ if eq (.Title) ("About") }}
     {{ partial "about.html" . }}
   {{ end }}
+  {{ if eq (.Title) ("Contact") }}
+    {{ partial "contact-form.html" . }}
+  {{ end }}
 </section>
