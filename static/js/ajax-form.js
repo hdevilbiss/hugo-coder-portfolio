@@ -7,6 +7,22 @@ window.addEventListener("DOMContentLoaded", function() {
     var status = document.getElementById("my-form-status");
 
     /**
+     * createTimer
+     */
+    function createTimer() {
+        setTimeout(1000);
+    }
+
+    /**
+     * inProgress
+     * @param {null}
+     * @return {null} Add temporary message
+     */
+    function inProgress() {
+        status.innerHTML = "<b>Working on that!</b>"
+    };
+
+    /**
      * success
      * This receives two parameters from ajax(), but doesn't use them?
      */
@@ -17,7 +33,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     /**
-     * success
+     * error
      * This receives two parameters from ajax(), but doesn't use them?
      */
     function error() {
@@ -30,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(ev) {
       ev.preventDefault();
       var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
+      ajax(form.method, form.action, data, success, error, inProgress);
     });
   });
 
@@ -43,7 +59,8 @@ window.addEventListener("DOMContentLoaded", function() {
  * @param {*} error
  * @return {void} : Open, set, check, and send with XHR
  */
-function ajax(method, url, data, success, error) {
+function ajax(method, url, data, success, error, inProgress) {
+    inProgress();
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
