@@ -37,7 +37,8 @@ window.addEventListener("DOMContentLoaded", function() {
      * This receives two parameters from ajax(), but doesn't use them?
      */
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+        //console.log(grecaptcha.getResponse());
+        status.innerHTML = "Oops! There was a problem.";
     }
 
     /**
